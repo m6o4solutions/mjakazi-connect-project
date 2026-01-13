@@ -1,13 +1,5 @@
 import { FormSubmission, Page, Post } from "@/payload-types";
-import {
-	defaultValue,
-	hidden,
-	label,
-	name,
-	placeholder,
-	required,
-	width,
-} from "@/payload/blocks/forms/config";
+import { defaultValue, hidden, label, name, placeholder, required, width } from "@/payload/blocks/forms/config";
 import { revalidateRedirects } from "@/payload/hooks/revalidate-redirects";
 import { beforeSyncWithSearch } from "@/payload/search/before-sync";
 import { searchFields } from "@/payload/search/field-overrides";
@@ -32,7 +24,7 @@ import { Plugin } from "payload";
 // dynamically constructs seo titles for pages and posts
 // adds brand consistency by appending the company name to each document title
 const generateTitle: GenerateTitle<Post | Page> = ({ doc }) => {
-	return doc?.title ? `${doc.title} | M6O4 Solutions` : "M6O4 Solutions";
+	return doc?.title ? `${doc.title} | Mjakazi Connect` : "Mjakazi Connect";
 };
 
 // dynamically constructs canonical urls for pages and posts
@@ -189,8 +181,7 @@ const plugins: Plugin[] = [
 							...field,
 							admin: {
 								...(field.admin ?? {}),
-								description:
-									"You will need to rebuild the website when changing this field.",
+								description: "You will need to rebuild the website when changing this field.",
 							},
 						} as typeof field;
 					}
