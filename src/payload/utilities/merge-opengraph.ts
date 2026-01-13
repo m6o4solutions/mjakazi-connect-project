@@ -5,14 +5,14 @@ import type { Metadata } from "next";
 const defaultOpenGraph: Metadata["openGraph"] = {
 	type: "website",
 	description:
-		"M6O4 delivers trusted, modern technology solutions that help businesses grow with confidence.",
+		"Mjakazi Connect helps families find trusted caregivers through a curated directory with verified profiles and secure, subscription-based access.",
 	images: [
 		{
 			url: `${getServerSideURL()}/abstract-image-1.jpg`,
 		},
 	],
-	siteName: "M6O4 Solutions",
-	title: "M6O4 Solutions",
+	siteName: "Mjakazi Connect",
+	title: "Mjakazi Connect",
 };
 
 // merges provided open graph data with defaults to ensure required fields exist

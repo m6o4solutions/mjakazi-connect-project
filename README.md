@@ -1,89 +1,102 @@
-# Payload Template
+# Mjakazi Connect
 
-This template comes configured with the bare minimum to get started on anything you need.
+Mjakazi Connect is a web application that connects families with domestic caregivers through a curated, subscription-gated platform. The product focuses on trust, controlled access, and active moderation rather than open or unmanaged listings.
 
-## Quick start
+The platform enables families to discover and evaluate caregivers, allows caregivers to present their skills and availability, and provides administrators with the tools needed to maintain quality and integrity across the system.
 
-This template can be deployed directly from our Cloud hosting and it will setup MongoDB
-and cloud S3 object storage for media.
+---
 
-## Quick Start - local setup
+## Product Overview
 
-To spin up this template locally, follow these steps:
+Mjakazi Connect operates as a restricted-access caregiver discovery platform.
 
-### Clone
+- Families browse caregiver profiles and unlock contact details through a paid subscription.
+- Caregivers create and maintain professional profiles that are reviewed before publication.
+- Administrators actively moderate profiles, enforce rules, and oversee platform activity.
 
-After you click the `Deploy` button above, you'll want to have standalone copy of this
-repo on your machine. If you've already cloned this repo, skip to
-[Development](#development).
+The platform facilitates connections only. It does not manage employment contracts, payments between users, or caregiver performance.
 
-### Development
+---
 
-1. First [clone the repo](#clone) if you have not done so already
-2. `cd my-project && cp .env.example .env` to copy the example environment variables.
-   You'll need to add the `MONGODB_URI` from your Cloud project to your `.env` if you want
-   to use S3 storage and the MongoDB database that was created for you.
+## Core User Roles
 
-3. `pnpm install && pnpm dev` to install dependencies and start the dev server
-4. open `http://localhost:3000` to open the app in your browser
+### Families
+- Browse published caregiver profiles
+- Unlock caregiver contact details via subscription
+- Post job listings for caregivers to view
 
-That's it! Changes made in `./src` will be reflected in your app. Follow the on-screen
-instructions to login and create your first admin user. Then check out
-[Production](#production) once you're ready to build and serve your app, and
-[Deployment](#deployment) when you're ready to go live.
+### Caregivers
+- Create and edit professional profiles
+- Submit profiles for review and approval
+- View and respond to job opportunities
 
-#### Docker (Optional)
+### Administrators
+- Review and approve caregiver profiles
+- Reject or archive listings when necessary
+- Manage users and platform content
+- Maintain audit trails and enforce platform rules
 
-If you prefer to use Docker for local development instead of a local MongoDB instance, the
-provided docker-compose.yml file can be used.
+---
 
-To do so, follow these steps:
+## Key Product Principles
 
-- Modify the `MONGODB_URI` in your `.env` file to `mongodb://127.0.0.1/<dbname>`
-- Modify the `docker-compose.yml` file's `MONGODB_URI` to match the above `<dbname>`
-- Run `docker-compose up` to start the database, optionally pass `-d` to run in the
-  background.
+- **Controlled Access**  
+  Sensitive information is gated and enforced at the system level.
 
-## How it works
+- **Trust by Design**  
+  Profile visibility is governed by review states, not user claims.
 
-The Payload config is tailored specifically to the needs of most websites. It is
-pre-configured in the following ways:
+- **Clear Boundaries**  
+  The platform connects people but does not guarantee outcomes.
 
-### Collections
+- **Consistency Over Convenience**  
+  Rules are enforced uniformly to protect trust and revenue.
 
-See the [Collections](https://payloadcms.com/docs/configuration/collections) docs for
-details on how to extend this functionality.
+---
 
-- #### Users (Authentication)
+## Key Features
 
-  Users are auth-enabled collections that have access to the admin panel.
+- Curated caregiver directory
+- Subscription-based access for families
+- Caregiver profile moderation workflow
+- Job posting for subscribed families
+- Administrative moderation console
+- Audit logging for critical actions
 
-  For additional help, see the official
-  [Auth Example](https://github.com/payloadcms/payload/tree/main/examples/auth) or the
-  [Authentication](https://payloadcms.com/docs/authentication/overview#authentication-overview)
-  docs.
+---
 
-- #### Media
+## Success Metrics
 
-  This is the uploads enabled collection. It features pre-configured sizes, focal point
-  and manual resizing to help you manage your pictures.
+- Active family subscriptions
+- Published caregiver profiles
+- Caregiver profile views by subscribed users
+- Contact detail unlocks
+- Job postings created by paying families
 
-### Docker
+---
 
-Alternatively, you can use [Docker](https://www.docker.com) to spin up this template
-locally. To do so, follow these steps:
+## Development Status
 
-1. Follow [steps 1 and 2 from above](#development), the docker-compose file will
-   automatically use the `.env` file in your project root
-1. Next run `docker-compose up`
-1. Follow [steps 4 and 5 from above](#development) to login and create your first admin
-   user
+This project is under active development.
 
-That's it! The Docker instance will help you get up and running quickly while also
-standardizing the development environment across your teams.
+Core platform behavior, access rules, and moderation workflows are treated as non-negotiable. Changes should align with existing product principles and specifications to avoid scope drift or inconsistent system behavior.
 
-## Questions
+---
 
-If you have any issues or questions, reach out to us on
-[Discord](https://discord.com/invite/payload) or start a
-[GitHub discussion](https://github.com/payloadcms/payload/discussions).
+## Contributing
+
+All contributions should:
+
+- Respect defined user roles and trust boundaries
+- Enforce access rules at the system level
+- Avoid introducing partial or ambiguous states
+- Maintain clear, predictable behavior
+
+Significant changes should be discussed before implementation.
+
+---
+
+## License
+
+Proprietary.  
+All rights reserved by Mjakazi Connect.
